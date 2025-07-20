@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Lost and Found Template">
+    <meta name="keywords" content="Lost, Found, Items, Report">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lost & Found</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- CSS Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+
+    <style>
+        .mobile-bottom-nav {
+            position: fixed;
+            bottom: 16px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            max-width: 400px;
+            background: #FFDAB9;
+            border-radius: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+            z-index: 1000;
+        }
+
+        .mobile-bottom-link {
+            text-decoration: none;
+            color: #8B4513;
+            text-align: center;
+            font-size: 12px;
+            flex: 1;
+            position: relative;
+        }
+
+        .mobile-bottom-icon {
+            font-size: 22px;
+            display: block;
+        }
+
+        .mobile-bottom-link::after {
+            content: attr(data-label);
+            position: absolute;
+            bottom: 120%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #f0b28c;
+            color: #fff;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 10px;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.2s ease-in-out;
+        }
+
+        .mobile-bottom-link:hover::after {
+            opacity: 1;
+        }
+
+        @media (min-width: 600px) {
+            .mobile-bottom-nav {
+                bottom: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- Lost Items Section Begin -->
+<section class="product spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-4">
+                <div class="section-title">
+                    <h4>Recently Reported Items</h4>
+                </div>
+            </div>
+            <div class="col-lg-8 col-md-8">
+                
+            </div>
+        </div>
+        <div class="row property__gallery">
+
+            <div class="col-lg-3 col-md-4 col-sm-6 mix bag">
+                <div class="product__item">
+                    <div class="product__item__pic set-bg" data-setbg="https://tse2.mm.bing.net/th/id/OIP.XIyb_NuIbG1Ljv0arLcHkAAAAA?r=0&rs=1&pid=ImgDetMain&o=7&rm=3">
+                        <div class="label new">Lost</div>
+                        <ul class="product__hover">
+                            <li><a href="contact.html"><span class="icon_mail_alt"></span></a></li>
+                        </ul>
+                    </div>
+                    <div class="product__item__text">
+                        <h6><a href="#">Black Laptop Bag</a></h6>
+                        <div class="rating">Library - 18 July 2025</div>
+                        <div class="product__price">Status: Lost</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 mix electronic">
+                <div class="product__item">
+                    <div class="product__item__pic set-bg" data-setbg="https://img.freepik.com/premium-photo/wireless-earbuds-isolated-white-background_350225-409.jpg?w=2000">
+                        <div class="label new">Found</div>
+                        <ul class="product__hover">
+                            <li><a href="contact.html"><span class="icon_mail_alt"></span></a></li>
+                        </ul>
+                    </div>
+                    <div class="product__item__text">
+                        <h6><a href="#">Wireless Earbuds</a></h6>
+                        <div class="rating">Cafeteria - 19 July 2025</div>
+                        <div class="product__price">Status: Found</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 mix idcard">
+                <div class="product__item">
+                    <div class="product__item__pic set-bg" data-setbg="https://img.freepik.com/premium-vector/corporate-id-card-design-template_684261-175.jpg?w=2000">
+                        <div class="label stockout">Lost</div>
+                        <ul class="product__hover">
+                            <li><a href="contact.html"><span class="icon_mail_alt"></span></a></li>
+                        </ul>
+                    </div>
+                    <div class="product__item__text">
+                        <h6><a href="#">College ID - Neha R</a></h6>
+                        <div class="rating">Auditorium - 17 July 2025</div>
+                        <div class="product__price">Status: Lost</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 mix others">
+                <div class="product__item">
+                    <div class="product__item__pic set-bg" data-setbg="https://tse2.mm.bing.net/th/id/OIP.gGbd-AUqCACvC_3U704GxgHaLH?r=0&rs=1&pid=ImgDetMain&o=7&rm=3">
+                        <div class="label new">Found</div>
+                        <ul class="product__hover">
+                            <li><a href="contact.html"><span class="icon_mail_alt"></span></a></li>
+                        </ul>
+                    </div>
+                    <div class="product__item__text">
+                        <h6><a href="#">Water Bottle (Red)</a></h6>
+                        <div class="rating"> Gym Hall - 20 July 2025</div>
+                        <div class="product__price">Status: Found</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- Lost Items Section End -->
+
+<!-- Bottom Navigation -->
+<div class="mobile-bottom-nav">
+    <a href="index.html" class="mobile-bottom-link" data-label="Home">
+        <i class="icon_house_alt mobile-bottom-icon"></i>
+    </a>
+    <a href="report-lost.html" class="mobile-bottom-link" data-label="Report Lost">
+        <i class="icon_pencil-edit mobile-bottom-icon"></i>
+    </a>
+    <a href="found-items.html" class="mobile-bottom-link" data-label="Found Items">
+        <i class="icon_box-checked mobile-bottom-icon"></i>
+    </a>
+    <a href="contact.html" class="mobile-bottom-link" data-label="Contact">
+        <i class="icon_mail_alt mobile-bottom-icon"></i>
+    </a>
+    <a href="login.html" class="mobile-bottom-link" data-label="Login">
+        <i class="icon_lock_alt mobile-bottom-icon"></i>
+    </a>
+    <a href="register.html" class="mobile-bottom-link" data-label="Register">
+        <i class="icon_profile mobile-bottom-icon"></i>
+    </a>
+</div>
+
+<!-- Scripts -->
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/mixitup.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.nicescroll.min.js"></script>
+<script src="js/main.js"></script>
+
+<script>
+    // Set background images
+    $('.set-bg').each(function () {
+        var bg = $(this).data('setbg');
+        $(this).css('background-image', 'url(' + bg + ')');
+    });
+
+    // Initialize MixItUp filtering
+    var mixer = mixitup('.property__gallery');
+</script>
+
+</body>
+</html>

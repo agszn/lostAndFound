@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Report Lost Item">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Lost Item</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+
+    <!-- CSS Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/elegant-icons.css">
+
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: #fff8f0;
+            padding-bottom: 100px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 40px auto;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #8B4513;
+        }
+
+        label {
+            font-weight: 600;
+            color: #4b3832;
+        }
+
+        .btn-submit {
+            background-color: #FFA07A;
+            color: #fff;
+            font-weight: 600;
+            border: none;
+            width: 100%;
+            padding: 10px;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+
+        .btn-submit:hover {
+            background-color: #FF7F50;
+        }
+
+        /* Bottom nav style */
+        .mobile-bottom-nav {
+            position: fixed;
+            bottom: 16px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            max-width: 400px;
+            background: #FFDAB9;
+            border-radius: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+            z-index: 1000;
+        }
+
+        .mobile-bottom-link {
+            text-decoration: none;
+            color: #8B4513;
+            text-align: center;
+            font-size: 12px;
+            flex: 1;
+            position: relative;
+        }
+
+        .mobile-bottom-icon {
+            font-size: 22px;
+            display: block;
+        }
+
+        .mobile-bottom-link::after {
+            content: attr(data-label);
+            position: absolute;
+            bottom: 120%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #f0b28c;
+            color: #fff;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 10px;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.2s ease-in-out;
+        }
+
+        .mobile-bottom-link:hover::after {
+            opacity: 1;
+        }
+
+        @media (min-width: 600px) {
+            .mobile-bottom-nav {
+                bottom: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Report a Lost Item</h2>
+        <form action="submit-lost-item.php" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="name">Your Full Name</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Enter your full name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="date">Date Lost</label>
+                <input type="date" class="form-control" id="date" name="date_lost" required>
+            </div>
+
+            <div class="form-group">
+                <label for="location">Location Lost</label>
+                <input type="text" class="form-control" id="location" name="location" placeholder="e.g. Library, Cafeteria" required>
+            </div>
+
+            <div class="form-group">
+                <label for="category">Item Category</label>
+                <select class="form-control" id="category" name="category" required>
+                    <option value="">-- Select --</option>
+                    <option value="Bag">Bag</option>
+                    <option value="Electronics">Electronics</option>
+                    <option value="ID Card">ID Card</option>
+                    <option value="Clothing">Clothing</option>
+                    <option value="Others">Others</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="description">Item Description</label>
+                <textarea class="form-control" id="description" name="description" rows="3" placeholder="Brief description of the lost item..." required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="image">Upload Item Photo (if any)</label>
+                <input type="file" class="form-control-file" id="image" name="image">
+            </div>
+
+            <div class="form-group">
+                <label for="contact">Your Contact (Email or Phone)</label>
+                <input type="text" class="form-control" id="contact" name="contact" placeholder="Enter your contact info" required>
+            </div>
+
+            <button type="submit" class="btn btn-submit">Submit Report</button>
+        </form>
+    </div>
+
+    <!-- Bottom Navigation -->
+    <div class="mobile-bottom-nav">
+        <a href="index.html" class="mobile-bottom-link" data-label="Home">
+            <i class="icon_house_alt mobile-bottom-icon"></i>
+        </a>
+        <a href="report-lost.html" class="mobile-bottom-link" data-label="Report Lost">
+            <i class="icon_pencil-edit mobile-bottom-icon"></i>
+        </a>
+        <a href="found-items.html" class="mobile-bottom-link" data-label="Found Items">
+            <i class="icon_box-checked mobile-bottom-icon"></i>
+        </a>
+        <a href="contact.html" class="mobile-bottom-link" data-label="Contact">
+            <i class="icon_mail_alt mobile-bottom-icon"></i>
+        </a>
+        <a href="login.html" class="mobile-bottom-link" data-label="Login">
+            <i class="icon_lock_alt mobile-bottom-icon"></i>
+        </a>
+        <a href="register.html" class="mobile-bottom-link" data-label="Register">
+            <i class="icon_profile mobile-bottom-icon"></i>
+        </a>
+    </div>
+
+</body>
+
+</html>
